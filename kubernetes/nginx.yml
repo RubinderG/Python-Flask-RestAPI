@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 10
+  replicas: 2
   selector:
     matchLabels:
       app: nginx
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: stratcastor/nginx-lbg-demo:latest
+        image: rubinder/nginx-flaskdemo:latest
         ports:
         - containerPort: 80
 ---
